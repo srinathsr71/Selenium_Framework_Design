@@ -1,26 +1,51 @@
 # Selenium_Framework_Design
 
 **Note:-**
-There are two ways to access jar file using configure build path and creating a dependency of the jar file and add in pom.xml file.
-1.one way 
-First we need to configure jar file in your project using build path in eclipse and create a object for the class after that we can access the methods using reference variable.
-CommonMethods cm=new CommonMethods();
-2.second way
-1.First we need to create a dependency of the jar file locally using the below command
-    mvn install:install-file -Dfile="C:\Users\Admin\Desktop\New folder\Automation_Framework-0.0.3.jar" -DgroupId=com.ActionMethods -DartifactId=Framework -Dversion=0.0.3 -    Dpackaging=jar
-    Dfile=location of the jar file
-    dgroupid=create your own id
-    dartifactid=create your own artifact id
-    dversion=mention the version of jar file your releasing
-    dpackaging=default its a jar file
-    
-2.once the above command is run it will create a dependency of the jar file, after that you can dependency as below mentioned in pom.xml file and update project.
-    <dependency>
+## Accessing a JAR file in a Java project
+
+### Method 1: Configuring JAR file in Eclipse Build Path
+
+1. Configure the JAR file in your project using the build path in Eclipse:
+   - Right-click on your project in Eclipse.
+   - Select "Build Path" > "Configure Build Path".
+   - Click on the "Libraries" tab.
+   - Click on "Add External JARs" or "Add JARs" and navigate to the location of your JAR file.
+   - Click "Apply" and then "OK".
+
+2. Create an object for the class:
+   ```java
+   CommonMethods cm = new CommonMethods();
+3.Access the methods using the reference variable cm.
+
+**Method 2: Adding JAR file as a Maven Dependency**
+1.Create a dependency of the JAR file locally using the following command:
+ ```java
+ mvn install:install-file -Dfile="C:\Users\Admin\Desktop\New folder\Automation_Framework-0.0.3.jar" -DgroupId=com.ActionMethods -DartifactId=Framework -                       Dversion=0.0.3 -Dpackaging=jar
+
+
+
+```java
+    Dfile: Location of the JAR file.
+    Dgroupid: Your custom group ID.
+    Dartifactid: Your custom artifact ID.
+    Dversion: Version of the JAR file.
+    Dpackaging: Default value is "jar".
+
+
+
+2.Add the dependency to your pom.xml file:
+    ```java
+<dependency>
     <groupId>com.ActionMethods</groupId>
     <artifactId>Framework</artifactId>
     <version>0.0.3</version>
 </dependency>
-3.after that create a object of the class and access the methods.
+
+
+3.Update your project to include the newly added dependency.
+4.Create an object of the class and access the methods.
+
+
 
 
 Here's the README file content:
