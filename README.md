@@ -1,8 +1,26 @@
 # Selenium_Framework_Design
 
 **Note:-**
-First we need to create a object for the class after that we can access the methods using reference variable.
+There are two ways to access jar file using configure build path and creating a dependency of the jar file and add in pom.xml file.
+1.one way 
+First we need to configure jar file in your project using build path in eclipse and create a object for the class after that we can access the methods using reference variable.
 CommonMethods cm=new CommonMethods();
+2.second way
+1.First we need to create a dependency of the jar file locally using the below command
+    mvn install:install-file -Dfile="C:\Users\Admin\Desktop\New folder\Automation_Framework-0.0.3.jar" -DgroupId=com.ActionMethods -DartifactId=Framework -Dversion=0.0.3 -    Dpackaging=jar
+    Dfile=location of the jar file
+    dgroupid=create your own id
+    dartifactid=create your own artifact id
+    dversion=mention the version of jar file your releasing
+    dpackaging=default its a jar file
+    
+2.once the above command is run it will create a dependency of the jar file, after that you can dependency as below mentioned in pom.xml file and update project.
+    <dependency>
+    <groupId>com.ActionMethods</groupId>
+    <artifactId>Framework</artifactId>
+    <version>0.0.3</version>
+</dependency>
+3.after that create a object of the class and access the methods.
 
 
 Here's the README file content:
