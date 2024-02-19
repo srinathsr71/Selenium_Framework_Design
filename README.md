@@ -19,12 +19,12 @@
 
 **Method 2: Adding JAR file as a Maven Dependency**
 1.Create a dependency of the JAR file locally using the following command:
- ```java
+ ```
  mvn install:install-file -Dfile="C:\Users\Admin\Desktop\New folder\Automation_Framework-0.0.3.jar" -DgroupId=com.ActionMethods -DartifactId=Framework -                       Dversion=0.0.3 -Dpackaging=jar
 
 
 
-```java
+```
     Dfile: Location of the JAR file.
     Dgroupid: Your custom group ID.
     Dartifactid: Your custom artifact ID.
@@ -34,7 +34,7 @@
 
 
 2.Add the dependency to your pom.xml file:
-    ```java
+    ```
 <dependency>
     <groupId>com.ActionMethods</groupId>
     <artifactId>Framework</artifactId>
